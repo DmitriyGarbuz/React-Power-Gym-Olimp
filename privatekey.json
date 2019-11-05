@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "olimp-256715",
+  "private_key_id": "b48b420b3bf845cf9a8a3f7b174acc9ebd74e703",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDK7YCuDfnVePSw\nYUUxg/X5fMwMzBaFZzHN6k9EuuDgePbOmMwFT/H8k6iDScBhorNFhp0Z38azZOGe\na74rOVBUgot/SqV9xhLvRmj5PywtCqlHDVo5WDZ9x2uYH+U+SoZxrB7vM7SnaAAy\nmJnl8EPANTVqnmVGgQ89B3EGeuZdR25I7sylDZBZ2vMuK6onEC8r5MPiWHHbIFj6\n6Pf5ocR803U6Ey2NVJq/fxA9FrJ+mUm0R1ankxGVioVLpwPLGze2/aFq2VgHdniz\nsSaCngKT4F6Snebcl+bUlmLlKDD5k6QrkEkb5vsA00bnmNtjJ9VLYQ7pfiYJrxZE\nmTZ7lFE5AgMBAAECggEABmEEcnoPLMYiYSjXEZQVl2sudxLiCFqEOzvl8TB5bL8t\nyp07dbJhnB7AU+5h/Hh0QQkcwWqw/gQ13LWD4xQLSRZBR4SWgrvHM/Xi4ptE0HXW\nBFGKokzuoTfWdj6E+iiffB8CmKih2NhuIvp8P0TYAuuJRY4kTPQe0qVB682ixHkD\nPGZAGH60T4I7zAriWIO4qiSbvrob1RyOgCEtxK4NlDEuzUieB/STeXKfvBSqiiwW\nCBCqhCAp/uYElFVFLvqmGyBFr/Xxu6T+Vgn8prXVhrbFm5OkOTVL7huoSLNDEZWt\nFf3++YMmGsFxaWiC/lNUvqkCPwC06Unzb29pxxKRuwKBgQDw0nyRpeohkXtd2evp\nl6675aDOKNVthzTNPSVsWfzFSWgwb5CfJrkiv5w9ZvyGnQfGExmQCHEAnQRYpAR8\ncgABPqwjbYLk3UnNoSlvy6WGlJ7smLcVsTj1IUe85wAohGeqx5S+lRwuRPc4IxHL\nYe2xokF0jt/404IPh21igrZ63wKBgQDXt5zmD2neg7CMWnwhREcOT2j8xYtDAiVU\n2xFaTvrngPpTO34bFK6BuovG3svKkaPVrmkymrXrVXAO6YZKYfpkFfTKxcOi9hjJ\n2hGT2HeX9jQutj415HhoGgLzjn/zNIBt/bWHQU7N1IaSXrs28S9dZLrhyYSJxBc8\nQofRm3TO5wKBgQCsMgWKa3VfbVQmBmWukJwLlKUH5KC/gXca7gbtU+bu9o8+Wvex\nJRIqK5I/QX19j5j4Y73ahH6wrpVmAFmI1kb0nOifKHX4ydY053DmlFoWQfzlNklr\nhF4ywQo3o4E0d4Bc1/qez6Xn275d8I2PvMUmR9u/yU2S8UHFctOfJdHvRwKBgQDQ\nCcBDD3JmqlJFya4U1yg/4M27mTgpM5SVNYCSu8C2K2k/hAymSVfSvPm4nX2kqrh6\nh23k49e2Uft0Jjrg2YUFqTcfp4J5UyWs5aY2E3mjEEpbEl8E0oZcv1lBUpiLEIMb\nkKbU/mLllqUB3GJpJkkrpM2mmxY7VuWhs/gQagBI2QKBgQDcq8vcjIUZbk8Wmmkr\nNgoBEmNvGh/mGzcgGYMZitXrnrKT5/Vb9j1KHQ3wwynj0QiYJKnKTOrmw8TotYk0\nuOHe1kC+ASMkpyk3VQP1dPrlQB6UVYp7K4D3DJM5l8wyRGUUZIN4RE2mn2dMzvT5\n1Pj+vmCC1cJuobAjRC1XISDyOA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "olimp-618@olimp-256715.iam.gserviceaccount.com",
+  "client_id": "103094018968425600745",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/olimp-618%40olimp-256715.iam.gserviceaccount.com"
+}
