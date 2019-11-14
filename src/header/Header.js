@@ -7,6 +7,7 @@ class Header extends Component {
     render () {
         return (
         <Headers.Wraper>
+          <Headers.TopDiv></Headers.TopDiv>
           <Headers.MobLogoGlobal>
           <Headers.MobLogoRow>
           <Headers.MobLogo>

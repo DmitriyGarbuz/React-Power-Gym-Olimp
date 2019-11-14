@@ -28,11 +28,11 @@ class Home extends Component {
         }
     render () {
         return (<Homes.HomeBack>
+<Homes.Conteiner>
             <Homes.H1>Спортивный клуб OLIMP</Homes.H1>
             <Homes.TextAfterH1>Лучшее место для работы над своим телом</Homes.TextAfterH1>
             <Homes.Hr></Homes.Hr>
-<Homes.Conteiner>
-    <Homes.Row>
+    <Homes.Row>    
     <Homes.ConteinerIn>
         <h3>Ждем от Даши помощи</h3>
         <p>Мы создали современный тренyeажерный зал, в котором есть все необходимое для эффектных и комфортных тренировок с новейшим оборудованием.</p>

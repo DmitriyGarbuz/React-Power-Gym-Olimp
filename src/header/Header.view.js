@@ -1,6 +1,15 @@
 import styled from "styled-components";
+import Cats from '../img/cats.png'
 
 export default {
+TopDiv: styled.div`
+background-image: URL(${Cats});
+
+width: 100%;
+height: 5vh;
+background-position: center;
+background-size: contain;
+`,
   DivLogo: styled.div`
   display: none;
   @media screen and (min-width: 600px) {
@@ -56,17 +65,19 @@ export default {
     width: 100%;
     height: 20%;
     justify-content: flex-start;
-    background: linear-gradient(to top, #2F5B81, #23344A);
     @media screen and (min-width: 600px) {
-      background: linear-gradient(to top, #2F5B81, #23344A);
       display: flex;
+      flex-direction: column;
       Justify-content: center;
       align-items: center;
     }
     `,
     Conteiner: styled.div`
+    background: linear-gradient(to top, #2F5B81, #23344A);
     display: flex;
     Justify-content: center;
+    width: 100%;
+    height: 20%;
     `,
   NavUl: styled.ul`
   margin-left: 70%;
@@ -77,7 +88,7 @@ export default {
         margin: 0;
         @media screen and (min-width: 600px) {
           overflow: auto;
-          width: 800px;
+          width: 600px;
           Justify-content: center;
       align-items: center;
         }

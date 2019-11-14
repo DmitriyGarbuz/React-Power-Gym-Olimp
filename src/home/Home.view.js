@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Background from "../img/homebackground.jpg";
+import Background from "../img/homebackground.jpeg";
 import BackMob from '../img/BackMob.jpg'
 
 export default {
@@ -28,11 +28,12 @@ background-position: bottom right, center center, top left;
     }
     `,
     Conteiner: styled.div`
-    background-color: #DBDFF0;
+    margin-top: 5%;
+
     background-position:  center center;
     margin-left: 10%;
     width: 80%;
-    height: 80%;
+    height: 95%;
     opacity: 0.5;
     border-radius: 5px;
     @media screen and (min-width: 600px) {
@@ -41,9 +42,9 @@ background-position: bottom right, center center, top left;
       margin-left: 0%;
       width: 60%;
       height: 60vh;
-      background-color: #DBDFF0;
+
       background-position: center center;
-      opacity: 0.8;
+
       filter: alpha(opacity=60);
       border-radius: 5px;
     }
@@ -64,14 +65,14 @@ background-position: bottom right, center center, top left;
     ,
  H1: styled.h1`
  font-size: 24px; 
- color: #23344A; 
+ color: #7F8203; 
  font-family: 'Helvetica Neue', sans-serif;
  line-height: 50px; 
  letter-spacing: 1px; 
  padding: 0 0 0px; 
  text-align: center;
  @media screen and (min-width: 600px) {
- color: #23344A; 
+ color: #7F8203; 
  font-family: 'Helvetica Neue', sans-serif; 
  font-size: 46px; 
  line-height: 50px; 
