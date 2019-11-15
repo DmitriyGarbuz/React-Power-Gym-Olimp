@@ -38,6 +38,16 @@ color: #fff;
   @media screen and (min-width: 600px) {
     font-size: 16px;
   }`,
+  Text: styled.p`
+font-size: 10px;
+text-decoration: none;
+color: #fff;
+:hover {
+    font-weight: bolder;
+  }
+  @media screen and (min-width: 600px) {
+    font-size: 16px;
+  }`,
 Logo: styled.img`
 width: auto;
 height: 40px;

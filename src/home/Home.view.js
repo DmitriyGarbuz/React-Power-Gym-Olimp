@@ -14,7 +14,7 @@ export default {
 background-position: bottom right, center center, top left;
     @media screen and (min-width: 600px) {
       width: 100%;
-      height: 90vh;
+      height: 100vh;
       margin-top: 0%;
       display: flex;
       background-size: cover;
@@ -28,23 +28,21 @@ background-position: bottom right, center center, top left;
     }
     `,
     Conteiner: styled.div`
-    margin-top: 5%;
 
     background-position:  center center;
     margin-left: 10%;
     width: 80%;
     height: 95%;
-    opacity: 0.5;
+
     border-radius: 5px;
     @media screen and (min-width: 600px) {
       display: flex;
       flex-direction: column;
       margin-left: 0%;
-      width: 60%;
-      height: 60vh;
-
+      width: 70%;
+      height: 90vh;
+      background-color: rgba(247,245,245,0.8);
       background-position: center center;
-
       filter: alpha(opacity=60);
       border-radius: 5px;
     }
@@ -58,6 +56,7 @@ background-position: bottom right, center center, top left;
     ,
     ConteinerIn: styled.div`
     @media screen and (min-width: 600px) {
+      width: 50%;
       display: flex;
       flex-direction: column;
     }
@@ -65,14 +64,14 @@ background-position: bottom right, center center, top left;
     ,
  H1: styled.h1`
  font-size: 24px; 
- color: #7F8203; 
+ color: white; 
  font-family: 'Helvetica Neue', sans-serif;
  line-height: 50px; 
  letter-spacing: 1px; 
  padding: 0 0 0px; 
  text-align: center;
  @media screen and (min-width: 600px) {
- color: #7F8203; 
+ color: white; 
  font-family: 'Helvetica Neue', sans-serif; 
  font-size: 46px; 
  line-height: 50px; 
@@ -104,14 +103,14 @@ font-family: 'Orienta', sans-serif;
 font-size: 30px;
 font-weight: 500;  
 letter-spacing: -1px; 
-color: black;
+color: white;
 text-shadow: 1px 1px 0 #000, margin: 2px 0 24px; 
 text-align: center; 
 line-height: 50px;
 margin-top: -15px;
 }`,
 Hr: styled.hr`
-margin-top: -3vh;
+margin-top: -4vh;
 width: 100px;
 height: 12px;
 border: 0;
@@ -135,8 +134,22 @@ text-align: center;
 line-height: 50px;
 margin-top: 5vh;
 `,
+TextAtCats: styled.p`
+color: #23344A; 
+font-family: 'Source Sans Pro', sans-serif; 
+font-size: 18px; 
+line-height: 32px; 
+margin: 0 0 24px;
+margin-top:2%;
+`,
 Futer: styled.div`
 height: 10vh;
     @media screen and (min-width: 600px) {
 }`,
+Logo: styled.img`
+width: 200px;
+height: auto;
+border-radius: 10%;
+margin: 1vh;
+`,
 }

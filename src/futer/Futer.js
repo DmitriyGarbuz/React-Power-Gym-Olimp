@@ -15,6 +15,11 @@ class Futer extends Component {
          <Futers.Arhor href="https://www.facebook.com/PowerGymOLIMP/"><Futers.Logo src={Facebook} alt="Facebook"></Futers.Logo></Futers.Arhor>
          <Futers.Arhor href="https://www.instagram.com/power_gym_olimp/"><Futers.Logo src={Insta} alt="Instagram"></Futers.Logo></Futers.Arhor>
          </Futers.ConteinerLogo>
+         <Futers.ConteinerIn>
+<Futers.Text>График работы<br/>
+Пн-Пт : с 9-00 по 22-00<br/>
+Сб-Вс : с 10-00 по 18-00</Futers.Text>
+         </Futers.ConteinerIn>
         </Futers.Wraper>
         
         )

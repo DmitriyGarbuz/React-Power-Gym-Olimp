@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import Homes from '../home/Home.view'
 import Tabletop from 'tabletop';
-
+import { NavLink } from 'react-router-dom';
+import "./home.css";
+import cat1 from '../img/cat1.jpg';
+import cat2 from '../img/cat2.jpg';
+import cat3 from '../img/cat3.jpg';
+import cat4 from '../img/cat4.jpg';
 
 
 class Home extends Component {
@@ -28,27 +33,38 @@ class Home extends Component {
         }
     render () {
         return (<Homes.HomeBack>
-<Homes.Conteiner>
-            <Homes.H1>Спортивный клуб OLIMP</Homes.H1>
+                        <Homes.H1>Спортивный клуб OLIMP</Homes.H1>
             <Homes.TextAfterH1>Лучшее место для работы над своим телом</Homes.TextAfterH1>
             <Homes.Hr></Homes.Hr>
+<Homes.Conteiner>
     <Homes.Row>    
     <Homes.ConteinerIn>
-        <h3>Ждем от Даши помощи</h3>
-        <p>Мы создали современный тренyeажерный зал, в котором есть все необходимое для эффектных и комфортных тренировок с новейшим оборудованием.</p>
-        <h3>Нужно придумать нужную Инфу</h3>
-        <p>Мы создали современный тренyeажерный зал, в котором есть все необходимое для эффектных и комфортных тренировок с новейшим оборудованием.</p>
+        <Homes.Row>
+        <Homes.Logo src={cat3} alt="cats"></Homes.Logo>
+        <Homes.TextAtCats> Мы создали современный тренажерный зал, в котором есть все необходимое для эффектных и комфортных тренировок с новейшим оборудованием.</Homes.TextAtCats>
+        </Homes.Row>
+        <Homes.Row>
+        <Homes.Logo src={cat2} alt="cats"></Homes.Logo>
+        <Homes.TextAtCats> Любая тренировка — это двигательная активность, которой критически не хватает современным людям. В течение дня мы сидим, иногда стоим, изредка ходим, и снова сидим. Но наше тело создано для другого! Оно должно бегать, прыгать и преодолевать препятствия. </Homes.TextAtCats>
+        </Homes.Row>
     </Homes.ConteinerIn>
     <Homes.ConteinerIn>
-    <h3>Что нибудь этокое</h3>
-        <p>Информаця Информаця Информаця Информаця Информаця Информаця Информаця Информаця Информаця Информаця </p>
-    <img scr="рисунок" alt="рисунок"></img>
-    <h3>Не могу же всё я придумывать</h3>
-        <p>Информаця Информаця Информаця Информаця Информаця Информаця Информаця Информаця Информаця Информаця </p>
-    <img scr="рисунок" alt="рисунок"></img>
+        <Homes.Row>
+        <Homes.Logo src={cat1} alt="cats"></Homes.Logo>
+        <Homes.TextAtCats><NavLink to="/about"><b>Наша команда</b></NavLink> знает как подобрать индивидуальную програму именно для вас. Мы уважаем личное пространство каждого атлета и вокруг каждого тренажёра предусмотрено свободное место. У нас вы не почуствуете, что на вас все смотрят, они просто в данный момент пашут :)</Homes.TextAtCats>
+        </Homes.Row>
+        <Homes.Row>
+        <Homes.Logo src={cat4} alt="cats"></Homes.Logo>
+        <Homes.TextAtCats> График работы Спортивного клуба Олимп максимально удобный для вас. Мы работаем без выходных с понедельника по пятницу с 9-00 до 22-00 , в субботу с 10-00 до 18-00, в воскресенье с 10-00 до 17-00. <b>{this.state.headline}</b></Homes.TextAtCats>
+        </Homes.Row>
     </Homes.ConteinerIn> 
     </Homes.Row>
-    <Homes.Text>{this.state.headline}</Homes.Text>
+    <div class="button-container-1">
+      <NavLink to="/price">
+      <span class="mas"><b>ХОЧУ УЗНАТЬ ЦЕНУ!</b></span>
+    <button id='work' type="button" name="Hover"><b>ХОЧУ УЗНАТЬ ЦЕНУ!</b></button>
+    </NavLink>
+  </div>
 </Homes.Conteiner>
 <Homes.Futer></Homes.Futer>
         </Homes.HomeBack>
