@@ -56,7 +56,7 @@ background-position: bottom right, center center, top left;
     ,
     ConteinerIn: styled.div`
     @media screen and (min-width: 600px) {
-      width: 50%;
+      width: 49%;
       display: flex;
       flex-direction: column;
     }
@@ -137,7 +137,7 @@ margin-top: 5vh;
 TextAtCats: styled.p`
 color: #23344A; 
 font-family: 'Source Sans Pro', sans-serif; 
-font-size: 18px; 
+font-size: 16px; 
 line-height: 32px; 
 margin: 0 0 24px;
 margin-top:2%;

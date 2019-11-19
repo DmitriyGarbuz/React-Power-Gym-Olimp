@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Background from "../img/homebackground.jpeg";
 
 export default {
     Back: styled.div`
@@ -7,8 +8,11 @@ export default {
     background-repeat: no-repeat;
 background-position: bottom right, center center, top left;
     @media screen and (min-width: 600px) {
+      background-image: URL(${Background});
+      ​​​​​​​background-repeat: no-repeat;
+      background-size: cover;
       width: 100%;
-      height: 90vh;
+      height: 140vh;
       display: flex;
       flex-direction: column;
       ​​​​​​​background-repeat: no-repeat;
@@ -21,10 +25,13 @@ background-position: bottom right, center center, top left;
     Conteiner: styled.div`
     background-position:  center center;
     @media screen and (min-width: 600px) {
+      background-color: rgba(247,245,245,0.8);
+      border-radius: 5px;
       display: flex;
       margin-left: 0%;
       width: 60%;
-      height: 60vh;
+      height: 100%;
+      margin-bottom: 5vh;
       background-position: center center;
       filter: alpha(opacity=60);
     }
@@ -43,7 +50,7 @@ background-position: bottom right, center center, top left;
     justify-content: center;
     `,
     Headline: styled.p`
-    color: #23344A; 
+    color: white; 
     font-family: 'Raleway',sans-serif; 
     font-size: 26px; 
     font-weight: 800; 

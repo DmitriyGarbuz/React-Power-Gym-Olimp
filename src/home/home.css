@@ -1,6 +1,6 @@
 .button-container-1 {
     position: relative;
-    width: 400px;
+    width: 250px;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -12,6 +12,8 @@
     font-size: 20px;
     transition: 0.5s;
     letter-spacing: 1px;
+    border-radius: 10px;
+    
   }
   .button-container-1 button {
     width: 101%;
@@ -87,5 +89,22 @@
     to {
       -webkit-mask-position: 0 0;
       mask-position: 0 0;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .button-container-1 {
+      position: relative;
+      width: 400px;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 6vh;
+      overflow: hidden;
+      border: 1px solid;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      transition: 0.5s;
+      letter-spacing: 1px;
     }
   }

@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
+import { NavLink } from 'react-router-dom';
 import Homes from '../home/Home.view'
 import Tabletop from 'tabletop';
-import { NavLink } from 'react-router-dom';
 import "./home.css";
 import cat1 from '../img/cat1.jpg';
 import cat2 from '../img/cat2.jpg';
 import cat3 from '../img/cat3.jpg';
 import cat4 from '../img/cat4.jpg';
+
 
 
 class Home extends Component {
@@ -55,7 +56,7 @@ class Home extends Component {
         </Homes.Row>
         <Homes.Row>
         <Homes.Logo src={cat4} alt="cats"></Homes.Logo>
-        <Homes.TextAtCats> График работы Спортивного клуба Олимп максимально удобный для вас. Мы работаем без выходных с понедельника по пятницу с 9-00 до 22-00 , в субботу с 10-00 до 18-00, в воскресенье с 10-00 до 17-00. <b>{this.state.headline}</b></Homes.TextAtCats>
+        <Homes.TextAtCats> График работы Спортивного клуба Олимп максимально удобный для вас. Мы работаем без выходных с понедельника по пятницу с 7-00 до 22-00 , выходные с 10-00 до 18-00. <b>{this.state.headline}</b></Homes.TextAtCats>
         </Homes.Row>
     </Homes.ConteinerIn> 
     </Homes.Row>

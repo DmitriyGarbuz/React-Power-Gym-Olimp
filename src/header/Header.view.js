@@ -3,12 +3,15 @@ import Cats from '../img/cats.png'
 
 export default {
 TopDiv: styled.div`
+display: none;
+@media screen and (min-width: 600px) {
+display: block;
 background-image: URL(${Cats});
-
 width: 100%;
 height: 5vh;
 background-position: center;
 background-size: contain;
+}
 `,
   DivLogo: styled.div`
   display: none;
@@ -20,10 +23,22 @@ background-size: contain;
    margin: 5px;
   }
   `,
+  MobTop: styled.div`
+  display: flex;
+  justify-content: center;
+  background-color: #23344A;
+  width: 100%;
+  height: 12vh;
+  background-position: center;
+  background-size: contain;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }`,
   MobLogoGlobal: styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  width: 40%;
+  width: 100%;
   height: 45%;
   @media screen and (min-width: 600px) {
     display: none;
@@ -40,13 +55,18 @@ background-size: contain;
   @media screen and (min-width: 600px) {
   }`,
   MobLogo: styled.div`
-  width: 70%;
+  width: 100%;
+  border-radius: 10%;
+  border: 4px solid #2F5B81;
+  margin: 1vh;
+  width: 50px;
+  height: 50px;
   @media screen and (min-width: 600px) {
   }`,
   Logo: styled.img`
-  border-radius: 10%;
-  width: 90%;
-  margin: 10%;
+  border-radius: 5%;
+  width: 100%;
+  
   position: releitive;
   @media screen and (min-width: 600px) {
   display: block;
@@ -73,12 +93,24 @@ background-size: contain;
     }
     `,
     Conteiner: styled.div`
+display: none;
+    @media screen and (min-width: 600px) {
+      background: linear-gradient(to top, #2F5B81, #23344A);
+      display: flex;
+      Justify-content: center;
+      width: 100%;
+      height: 20%;
+    }
+    `,
+    ConteinerMob: styled.div`
     background: linear-gradient(to top, #2F5B81, #23344A);
     display: flex;
     Justify-content: center;
     width: 100%;
     height: 20%;
-    `,
+    @media screen and (min-width: 600px) {
+    display: none;
+    } `,
   NavUl: styled.ul`
   margin-left: 70%;
         list-style: none;

@@ -40,13 +40,11 @@ class Price extends Component {
   
     getPrice = () => {
         Tabletop.init({
-            key: '140uIkrEoV9SC-ZSQChr-Xin5E_hLcWUVMv-vVA1TqNw',
+            key: 'https://docs.google.com/spreadsheets/d/140uIkrEoV9SC-ZSQChr-Xin5E_hLcWUVMv-vVA1TqNw/Sheet1/edit#gid=0',
             callback: googleData => {
-              console.log('google sheet data --->', googleData);
-              this.setState({infos: googleData});
-              console.log(this.state.infos, "data");
+              this.setState({infos: googleData.Abons.elements});
             },
-            simpleSheet: true
+            simpleSheet: false
           })
         // axios.get('https://sheets.googleapis.com/v4/spreadsheets/140uIkrEoV9SC-ZSQChr-Xin5E_hLcWUVMv-vVA1TqNw/values:batchGet?ranges=A1:A5&majorDimension=ROWS&key=AIzaSyDXKG0LFWyMXNERW42kI69F0yfDI_tVej8')
         // .then(({data}) => {
@@ -68,7 +66,7 @@ class Price extends Component {
     
     render () {
         return (<Prices.Back>
-            <Prices.Headline>Абонименты</Prices.Headline>
+            <Prices.Headline>Абонементы</Prices.Headline>
 <div>
     <div>
     {this.state.infos ?

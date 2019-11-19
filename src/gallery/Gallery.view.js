@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Background from "../img/homebackground.jpg";
+import Background from "../img/homebackground.jpeg";
 import BackMob from '../img/BackMob.jpg'
 
 export default {
