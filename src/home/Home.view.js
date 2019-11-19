@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import Background from "../img/homebackground.jpeg";
-import BackMob from '../img/BackMob.jpg'
+import BackMob1 from '../img/BackMob1.jpg'
 
 export default {
     HomeBack: styled.div`
     width: 100%;
     height: 100%;
-    background-image: URL(${BackMob});
+    background-image: URL(${BackMob1});
     background-repeat: no-repeat;
     Justify-content: center;
     align-items: center;
