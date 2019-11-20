@@ -1,11 +1,15 @@
 import styled from "styled-components";
-import Background from "../img/homebackground.jpeg";
+import Background from "../img/homebackground.jpg";
+import Backmob from '../img/BackMob.jpg';
 
 export default {
     Back: styled.div`
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-image: URL(${Backmob});
     background-repeat: no-repeat;
+    background-position: top;
 background-position: bottom right, center center, top left;
     @media screen and (min-width: 600px) {
       background-image: URL(${Background});
@@ -15,7 +19,6 @@ background-position: bottom right, center center, top left;
       height: 140vh;
       display: flex;
       flex-direction: column;
-      ​​​​​​​background-repeat: no-repeat;
       background-position: left;
       display: flex;
       Justify-content: flex-start;
@@ -47,7 +50,9 @@ background-position: bottom right, center center, top left;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    @media screen and (min-width: 600px) {
+    margin-top: 2%;
+    }
     `,
     Headline: styled.p`
     color: white; 
@@ -66,16 +71,45 @@ background-position: bottom right, center center, top left;
     height: auto;
     border-radius: 10%;
     margin: 1vh;
-`,
+    margin-top: 5vh;
+    @media screen and (min-width: 600px) {
+    width: 200px;
+    height: auto;
+    border-radius: 10%;
+    margin: 1vh;
+    }`,
 Text: styled.p`
+margin-block-start: -1vh;
+margin-block-end: 0vh;
 font-family: 'Orienta', sans-serif;
 font-size: 30px;
 font-weight: 500;  
 letter-spacing: -1px; 
-color: black;
-text-shadow: 1px 1px 0 #000, margin: 2px 0 24px; 
+color: white;
+text-shadow: 1px 1px 0 #000;
 text-align: center; 
 line-height: 50px;
-margin-top: -15px;
-`,
+@media screen and (min-width: 600px) {
+color: black;
+}`,
+TextAt: styled.p`
+margin-block-start: 0em;
+margin-block-end: 0vh;
+color: white; 
+font-weight: 700;
+width: 200px;
+font-family: 'Source Sans Pro', sans-serif; 
+font-size: 14px; 
+text-align: center; 
+ 
+@media screen and (min-width: 600px) {
+color: #23344A; 
+font-size: 16px;
+margin-left: 1%;
+margin-right: 1%;
+}`,
+Futer: styled.div`
+height: 10vh;
+    @media screen and (min-width: 600px) {
+}`,
 }

@@ -66,8 +66,9 @@ class Home extends Component {
     <button id='work' type="button" name="Hover"><b>ХОЧУ УЗНАТЬ ЦЕНУ!</b></button>
     </NavLink>
   </div>
+  <Homes.Backspace/>
 </Homes.Conteiner>
-<Homes.Futer></Homes.Futer>
+<Homes.Futer/>
         </Homes.HomeBack>
         )
     }

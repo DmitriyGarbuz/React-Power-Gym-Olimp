@@ -11,7 +11,8 @@ class PersonLeft extends Component {
         type: this.props.type|| '',
         nameR: this.props.nameR|| '',
         imgR: this.props.imgR|| '', 
-        
+        textL: this.props.textL|| '',
+        textR: this.props.textR|| '',
     }
     
     render () {
@@ -19,6 +20,7 @@ class PersonLeft extends Component {
         return (<div type={this.state.type}> 
             <Abouts.Logo src={this.state.imgL} alt="PersonPhoto"></Abouts.Logo>
             <Abouts.Text>{this.state.nameL}</Abouts.Text>
+            <Abouts.TextAt>{this.state.textL}</Abouts.TextAt>
         </div>
         )
     }
@@ -34,6 +36,8 @@ class PersonRight extends Component {
         type: this.props.type|| '',
         nameR: this.props.nameR|| '',
         imgR: this.props.imgR|| '', 
+        textL: this.props.textL|| '',
+        textR: this.props.textR|| '',
         
     }
     
@@ -42,6 +46,7 @@ class PersonRight extends Component {
         return (<div type={this.state.type}> 
             <Abouts.Logo src={this.state.imgR} alt="PersonPhoto"></Abouts.Logo>
             <Abouts.Text>{this.state.nameR}</Abouts.Text>
+            <Abouts.TextAt>{this.state.textR}</Abouts.TextAt>
         </div>
         )
     }
@@ -98,6 +103,7 @@ class About extends Component {
     </Abouts.ConteinerPerson>
     </Abouts.ConteinerIn>
 </Abouts.Conteiner>
+<Abouts.Futer/>
         </Abouts.Back>
         )
     }

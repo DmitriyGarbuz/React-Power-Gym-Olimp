@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import Background from "../img/homebackground.jpeg";
-import BackMob1 from '../img/BackMob1.jpg'
+import Background from "../img/homebackground.jpg";
+import Backmob from '../img/BackMob.jpg';
 
 export default {
     HomeBack: styled.div`
     width: 100%;
     height: 100%;
-    background-image: URL(${BackMob1});
+    background-size: cover;
+    background-image: URL(${Backmob});
     background-repeat: no-repeat;
     Justify-content: center;
     align-items: center;
@@ -32,8 +33,8 @@ background-position: bottom right, center center, top left;
     background-position:  center center;
     margin-left: 10%;
     width: 80%;
-    height: 95%;
-
+    height: 97%;
+    background-color: rgba(247,245,245,0.8);
     border-radius: 5px;
     @media screen and (min-width: 600px) {
       display: flex;
@@ -90,10 +91,10 @@ padding: 0 0 2px;
 `,
 TextAfterH1: styled.p`
 font-family: 'Orienta', sans-serif;
-font-size: 20px;
+font-size: 16px;
 font-weight: 500;  
 letter-spacing: -1px; 
-color: black;
+color: white;
 text-shadow: 1px 1px 0 #000, margin: 2px 0 24px; 
 text-align: center; 
 line-height: 50px;
@@ -111,7 +112,7 @@ margin-top: -15px;
 }`,
 Hr: styled.hr`
 margin-top: -4vh;
-width: 100px;
+width: 250px;
 height: 12px;
 border: 0;
 box-shadow: inset 0 12px 12px -12px #23344A;
@@ -137,19 +138,34 @@ margin-top: 5vh;
 TextAtCats: styled.p`
 color: #23344A; 
 font-family: 'Source Sans Pro', sans-serif; 
-font-size: 16px; 
+font-size: 14px; 
 line-height: 32px; 
 margin: 0 0 24px;
 margin-top:2%;
-`,
+margin-left: 5px;
+margin-right: 1%;
+@media screen and (min-width: 600px) {
+font-size: 16px;
+margin-left: 1%;
+margin-right: 1%;
+}`,
 Futer: styled.div`
 height: 10vh;
     @media screen and (min-width: 600px) {
 }`,
+Backspace: styled.div`
+height: 2vh;
+    @media screen and (min-width: 600px) {
+}`,
 Logo: styled.img`
+width: 95%;
+height: auto;
+border-radius: 10%;
+margin: 1vh;
+@media screen and (min-width: 600px) {
 width: 200px;
 height: auto;
 border-radius: 10%;
 margin: 1vh;
-`,
+}`,
 }

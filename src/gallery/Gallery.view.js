@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import Background from "../img/homebackground.jpeg";
-import BackMob1 from '../img/BackMob1.jpg'
+import Background from "../img/homebackground.jpg";
+import Backmob from '../img/BackMob.jpg';
 
 export default {
     Back: styled.div`
     width: 100%;
     height: 100%;
-    background-image: URL(${BackMob1});
+    background-size: cover;
+    background-image: URL(${Backmob});
     background-repeat: no-repeat;
 background-position: bottom right, center center, top left;
     @media screen and (min-width: 600px) {
