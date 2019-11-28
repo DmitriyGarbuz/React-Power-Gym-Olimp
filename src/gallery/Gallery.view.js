@@ -36,18 +36,26 @@ background-position: bottom right, center center, top left;
     background-position:  center center;
     @media screen and (min-width: 600px) {
       display: flex;
+      flex-direction: row;
       margin-left: 0%;
       width: 60%;
-      height: 60vh;
+      height: 60rem;
       background-color: #DBDFF0;
       background-position: center center;
       filter: alpha(opacity=60);
       border-radius: 5px;
-      border: 7px solid #2F5B81;
+      border: 2px solid #2F5B81;
     }
     `,
+    ConteinerIn: styled.div`
+    @media screen and (min-width: 600px) {
+      width: 25%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }`,
     Headline: styled.p`
-    color: #23344A; 
+    color: white; 
     font-family: 'Raleway',sans-serif; 
     font-size: 26px; 
     font-weight: 800; 

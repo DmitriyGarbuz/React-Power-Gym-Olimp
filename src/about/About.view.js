@@ -90,7 +90,7 @@ text-shadow: 1px 1px 0 #000;
 text-align: center; 
 line-height: 50px;
 @media screen and (min-width: 600px) {
-color: black;
+color: #23344A;
 }`,
 TextAt: styled.p`
 margin-block-start: 0em;

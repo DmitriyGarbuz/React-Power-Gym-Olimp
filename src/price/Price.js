@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
 import Prices from './Price.view';
-// import axios from 'axios';
 import Tabletop from 'tabletop';
-//import Spreadsheet from 'react-spreadsheet';
-//import config from "../config";
-//import ReactGoogleSheets from 'react-google-sheets';
+import '../helpers/loader.css';
 
 class Abon extends Component {
         state = {
@@ -13,6 +10,7 @@ class Abon extends Component {
             cost: this.props.cost|| '', 
             id: this.props.id|| '',       
         }
+        
         render () {
             return (<div>
                 <Prices.Text>{this.state.abonement} - {this.state.cost}</Prices.Text>
@@ -46,36 +44,26 @@ class Price extends Component {
             },
             simpleSheet: false
           })
-        // axios.get('https://sheets.googleapis.com/v4/spreadsheets/140uIkrEoV9SC-ZSQChr-Xin5E_hLcWUVMv-vVA1TqNw/values:batchGet?ranges=A1:A5&majorDimension=ROWS&key=AIzaSyDXKG0LFWyMXNERW42kI69F0yfDI_tVej8')
-        // .then(({data}) => {
-        //     this.setState({abonement: data})
-        //     console.log(this.state.abonement, "abonement");
-        //     console.log (typeof(this.state.abonement));
-        // })
-        // axios.get('https://sheets.googleapis.com/v4/spreadsheets/140uIkrEoV9SC-ZSQChr-Xin5E_hLcWUVMv-vVA1TqNw/values:batchGet?ranges=B1:B5&majorDimension=ROWS&key=AIzaSyDXKG0LFWyMXNERW42kI69F0yfDI_tVej8')
-        // .then(({data}) => {
-        //     this.setState({cost: data.valueRanges["0"].values})
-        //     console.log(this.state.cost, "cost");
-        // })
-        // axios.get('https://sheets.googleapis.com/v4/spreadsheets/140uIkrEoV9SC-ZSQChr-Xin5E_hLcWUVMv-vVA1TqNw/values:batchGet?ranges=C1:C5&majorDimension=ROWS&key=AIzaSyDXKG0LFWyMXNERW42kI69F0yfDI_tVej8')
-        // .then(({data}) => {
-        //     this.setState({id: data.valueRanges["0"].values})
-        //     console.log(this.state.id, "id");
-        // })
     }
     
     render () {
         return (<Prices.Back>
             <Prices.Headline>Абонементы</Prices.Headline>
+            <Prices.Conteiner>
+            <Prices.Futer></Prices.Futer>
 <div>
     <div>
     {this.state.infos ?
          this.state.infos.map(info =>
           <Abon {...info} key={info.id}/>
-        ) : <p>Загрузка</p>
+        ) : <div className="loader">
+        <div className="loader_inner"></div>
+      </div>
       }
     </div>
 </div>
+<Prices.Futer></Prices.Futer>
+</Prices.Conteiner>
 <Prices.Futer></Prices.Futer>
         </Prices.Back>
         )

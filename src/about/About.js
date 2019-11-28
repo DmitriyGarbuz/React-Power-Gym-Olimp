@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../helpers/loader.css';
 import Abouts from '../about/About.view';
 import Tabletop from 'tabletop';
 
@@ -71,7 +72,6 @@ class About extends Component {
             key: 'https://docs.google.com/spreadsheets/d/140uIkrEoV9SC-ZSQChr-Xin5E_hLcWUVMv-vVA1TqNw/Persons/edit#gid=929547388',
             callback: googleData => {
               this.setState({persons: googleData.Persons.elements});
-              console.log(this.state.persons, "data");
             },
             simpleSheet: false
           })
@@ -86,7 +86,9 @@ class About extends Component {
     {this.state.persons ?
          this.state.persons.map(person => 
           <PersonLeft {...person} key={person.id}/>
-         ) : <p>Загрузка</p>
+         ) : <div className="loader">
+         <div className="loader_inner"></div>
+       </div>
       }
     </div>
     </Abouts.ConteinerPerson>
@@ -97,7 +99,9 @@ class About extends Component {
     {this.state.persons ?
          this.state.persons.map(person => 
           <PersonRight {...person} key={person.id}/>
-         ) : <p>Загрузка</p>
+         ) : <div className="loader">
+         <div className="loader_inner"></div>
+       </div>
       }
     </div>
     </Abouts.ConteinerPerson>

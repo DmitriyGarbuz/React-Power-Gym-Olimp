@@ -30,11 +30,11 @@ else{this.setState({navbar: false});}
           {this.state.navbar !== false ? 
           <Headers.ConteinerMob>
           <Headers.NavUl>
-            <Headers.NavLi><NavLink to="/">Главная</NavLink></Headers.NavLi>
-            <Headers.NavLi><NavLink to="/about">О Нас</NavLink></Headers.NavLi>
-            <Headers.NavLi><NavLink to="/gallery">Галерея</NavLink></Headers.NavLi>
-            <Headers.NavLi><NavLink to="/price">Цены</NavLink></Headers.NavLi>
-            <Headers.NavLi><NavLink to="/contacts">Контакты</NavLink></Headers.NavLi>
+            <Headers.NavLi onClick={this.getNavbar}><NavLink to="/">Главная</NavLink></Headers.NavLi>
+            <Headers.NavLi onClick={this.getNavbar}><NavLink to="/about">О Нас</NavLink></Headers.NavLi>
+            <Headers.NavLi onClick={this.getNavbar}><NavLink to="/gallery">Галерея</NavLink></Headers.NavLi>
+            <Headers.NavLi onClick={this.getNavbar}><NavLink to="/price">Цены</NavLink></Headers.NavLi>
+            <Headers.NavLi onClick={this.getNavbar}><NavLink to="/contacts">Контакты</NavLink></Headers.NavLi>
           </Headers.NavUl>
         </Headers.ConteinerMob>
           : ''}

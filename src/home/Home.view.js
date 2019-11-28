@@ -23,13 +23,11 @@ background-position: bottom right, center center, top left;
       background-image: URL(${Background});
       ​​​​​​​background-repeat: no-repeat;
       background-position: left;
-      display: flex;
       Justify-content: flex-start;
       align-items: center;
     }
     `,
     Conteiner: styled.div`
-
     background-position:  center center;
     margin-left: 10%;
     width: 80%;
@@ -46,23 +44,18 @@ background-position: bottom right, center center, top left;
       background-position: center center;
       filter: alpha(opacity=60);
       border-radius: 5px;
-    }
-    `,
+    }`,
     Row: styled.div`
     @media screen and (min-width: 600px) {
       display: flex;
       flex-direction: row;
-    }
-    `
-    ,
+    }`,
     ConteinerIn: styled.div`
     @media screen and (min-width: 600px) {
       width: 49%;
       display: flex;
       flex-direction: column;
-    }
-    `
-    ,
+    }`,
  H1: styled.h1`
  font-size: 24px; 
  color: white; 
