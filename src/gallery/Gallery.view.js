@@ -24,8 +24,11 @@ background-position: bottom right, center center, top left;
     `,
     Conteiner: styled.div`
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-left: 3%;
-    width: 90%;
+    margin-right:3%
+    width: auto;
     height: 40%;
     background-color: #DBDFF0;
     background-position: center center;
@@ -36,9 +39,13 @@ background-position: bottom right, center center, top left;
     background-position:  center center;
     @media screen and (min-width: 600px) {
       display: flex;
+      flex-direction: column;
+    }
+      @media screen and (min-width: 1035px) {
+      display: flex;
       flex-direction: row;
       margin-left: 0%;
-      width: 60%;
+      width: 60rem;
       height: 60rem;
       background-color: #DBDFF0;
       background-position: center center;
@@ -49,10 +56,14 @@ background-position: bottom right, center center, top left;
     `,
     ConteinerIn: styled.div`
     @media screen and (min-width: 600px) {
-      width: 25%;
+      width: 50%;
+    }
+    @media screen and (min-width: 1035px) {
+      width: 50%;
       height: 100%;
       display: flex;
       flex-direction: column;
+      Justify-content: center;
     }`,
     Headline: styled.p`
     color: white; 

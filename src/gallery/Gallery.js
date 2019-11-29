@@ -17,7 +17,8 @@ class Gallery extends Component {
             data: '',
             img: '', 
             id: '', 
-            alt: '', 
+            picture: '',
+            numb: '' ,
             link: false
       }
       this.getPictures();
@@ -26,31 +27,45 @@ class Gallery extends Component {
         Tabletop.init({
             key: 'https://docs.google.com/spreadsheets/d/140uIkrEoV9SC-ZSQChr-Xin5E_hLcWUVMv-vVA1TqNw/Persons/edit#gid=929547388',
             callback: googleData => {
-              this.setState({gallerys: googleData.Gallery.elements, img: googleData.Gallery.elements.img, id: googleData.Gallery.elements.id, alt: googleData.Gallery.elements.alt });
+              this.setState({gallerys: googleData.Gallery.elements, img: googleData.Gallery.elements.img, id: googleData.Gallery.elements.id});
 
             },
             simpleSheet: false
           })
         }
 
-   getPicture = () => { if(this.state.link !== true){
-this.setState({  
-    link: true})
-}else{
-    this.setState({  
-        link: false}) 
+   getPicture = (e) => {this.setState({ link: !this.state.link, picture: e.target.src, numb: e.target.alt})
 }
-    }
+prev = () => {this.state.numb === 0 ? this.setState({picture:  this.state.gallerys[15].img , numb: 15}):
+this.setState({picture:  this.state.gallerys[(parseInt(this.state.numb)) - 1].img , numb: (parseInt(this.state.numb)) - 1})}
+
+next = () => {this.state.numb === 15 ? this.setState({picture:  this.state.gallerys[0].img , numb: 0}):
+this.setState({picture:  this.state.gallerys[(parseInt(this.state.numb)) + 1].img , numb: (parseInt(this.state.numb)) + 1})}
+// prev = () => {if(this.state.numb === 0){
+//     this.setState({picture:  this.state.gallerys[15].img , numb: 15})
+// }else{
+// const n = (parseInt(this.state.numb)) - 1;
+// this.setState({picture:  this.state.gallerys[n].img , numb: n})
+// }
+// }
+// next = () => {if(this.state.numb === 15){
+//     this.setState({picture:  this.state.gallerys[0].img , numb: 0})
+// }else{
+// const n = (parseInt(this.state.numb)) + 1;
+// this.setState({picture:  this.state.gallerys[n].img, numb: n})
+// }
+// }
+
     render () {
         return (<Gallerys.Back>
             <Gallerys.Headline>Галерея</Gallerys.Headline>
-<Gallerys.Conteiner>
+<Gallerys.Conteiner><div className="gallery-mob">
 {this.state.gallerys ?
     <Gallerys.ConteinerIn>
-  <img className="picture" src={this.state.gallerys[0].img} alt={this.state.gallerys[0].alt}></img>
-  <img className="picture" src={this.state.gallerys[1].img} alt={this.state.gallerys[1].alt}></img>
-  <img className="picture" src={this.state.gallerys[2].img} alt={this.state.gallerys[2].alt}></img>
-  <img className="picture" src={this.state.gallerys[3].img} alt={this.state.gallerys[3].alt}></img>
+  <img className="pictures" src={this.state.gallerys[0].img} alt={this.state.gallerys[0].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[1].img} alt={this.state.gallerys[1].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[2].img} alt={this.state.gallerys[2].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[3].img} alt={this.state.gallerys[3].id} onClick={this.getPicture}></img>
     </Gallerys.ConteinerIn>
       : <div className="loader">
       <div className="loader_inner"></div>
@@ -58,10 +73,23 @@ this.setState({
  }
 {this.state.gallerys ?
     <Gallerys.ConteinerIn>
-  <img className="picture" src={this.state.gallerys[4].img} alt={this.state.gallerys[4].alt}></img>
-  <img className="picture" src={this.state.gallerys[5].img} alt={this.state.gallerys[5].alt}></img>
-  <img className="picture" src={this.state.gallerys[6].img} alt={this.state.gallerys[6].alt}></img>
-  <img className="picture" src={this.state.gallerys[7].img} alt={this.state.gallerys[7].alt}></img>
+  <img className="pictures" src={this.state.gallerys[4].img} alt={this.state.gallerys[4].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[5].img} alt={this.state.gallerys[5].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[6].img} alt={this.state.gallerys[6].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[7].img} alt={this.state.gallerys[7].id} onClick={this.getPicture}></img>
+    </Gallerys.ConteinerIn>
+      : <div className="loader">
+      <div className="loader_inner"></div>
+    </div>
+ }
+ </div>
+ <div className="gallery-mob">
+ {this.state.gallerys ?
+    <Gallerys.ConteinerIn>
+  <img className="pictures" src={this.state.gallerys[8].img} alt={this.state.gallerys[8].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[9].img} alt={this.state.gallerys[9].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[10].img} alt={this.state.gallerys[10].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[11].img} alt={this.state.gallerys[11].id} onClick={this.getPicture}></img>
     </Gallerys.ConteinerIn>
       : <div className="loader">
       <div className="loader_inner"></div>
@@ -69,29 +97,30 @@ this.setState({
  }
  {this.state.gallerys ?
     <Gallerys.ConteinerIn>
-  <img className="picture" src={this.state.gallerys[8].img} alt={this.state.gallerys[8].alt}></img>
-  <img className="picture" src={this.state.gallerys[9].img} alt={this.state.gallerys[9].alt}></img>
-  <img className="picture" src={this.state.gallerys[10].img} alt={this.state.gallerys[10].alt}></img>
-  <img className="picture" src={this.state.gallerys[11].img} alt={this.state.gallerys[11].alt}></img>
+  <img className="pictures" src={this.state.gallerys[12].img} alt={this.state.gallerys[12].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[13].img} alt={this.state.gallerys[13].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[14].img} alt={this.state.gallerys[14].id} onClick={this.getPicture}></img>
+  <img className="pictures" src={this.state.gallerys[15].img} alt={this.state.gallerys[15].id} onClick={this.getPicture}></img>
     </Gallerys.ConteinerIn>
       : <div className="loader">
       <div className="loader_inner"></div>
     </div>
  }
- {this.state.gallerys ?
-    <Gallerys.ConteinerIn>
-  <img className="picture" src={this.state.gallerys[12].img} alt={this.state.gallerys[12].alt}></img>
-  <img className="picture" src={this.state.gallerys[13].img} alt={this.state.gallerys[13].alt}></img>
-  <img className="picture" src={this.state.gallerys[14].img} alt={this.state.gallerys[14].alt}></img>
-  <img className="picture" src={this.state.gallerys[15].img} alt={this.state.gallerys[15].alt}></img>
-    </Gallerys.ConteinerIn>
-      : <div className="loader">
-      <div className="loader_inner"></div>
-    </div>
- }
-{this.state.link !== false ? <div className="globalPicture"><img src={this.state.img} alt='galleryglobal'></img></div> : ''}
+</div>
 </Gallerys.Conteiner>
-{this.state.link !== false ? <div>Я Есть</div> : ''}
+{this.state.link !== false ? <div className="globalPicture">
+    <div className="container"></div>
+    <div className="row justify-content-end">
+        <div className="col-2"><div  className="close" onClick={this.getPicture}></div></div>
+    </div>
+    <div className="row">
+        <div className="col-1"><p> <i className="arrow left" onClick={this.prev}></i></p></div>
+        <div className="col-10"><img src={this.state.picture} alt='galleryglobal'></img></div>
+        <div className="col-1"><p> <i className="arrow right" onClick={this.next}></i></p>
+</div>
+    </div>
+    
+    </div> : ''}
 <Gallerys.Futer></Gallerys.Futer>
         </Gallerys.Back>
         )
