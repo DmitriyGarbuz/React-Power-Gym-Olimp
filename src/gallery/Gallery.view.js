@@ -59,6 +59,8 @@ background-position: bottom right, center center, top left;
       width: 50%;
     }
     @media screen and (min-width: 1035px) {
+      
+      box-sizing: border-box;
       width: 50%;
       height: 100%;
       display: flex;

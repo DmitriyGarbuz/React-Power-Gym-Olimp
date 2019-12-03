@@ -29,3 +29,20 @@ code {
   --loader-bar-color: #0080ff;
   --loader-bar-height: 6px;
   }
+  .rounded {
+    display: none;
+  }
+  @media screen and (max-width: 580px) {
+  .rounded {
+    display: block;
+    position: fixed;
+    margin-left: -17%;
+    margin-top: 3%;
+    background-color: white;
+    border-top-left-radius: 0.55rem !important;
+    border-top-right-radius: 0.55rem !important;
+    border-bottom-right-radius: 0.55rem !important;
+    border-bottom-left-radius: 0.55rem !important;
+    opacity: 0.8;
+  }
+}

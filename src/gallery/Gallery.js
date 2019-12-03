@@ -36,10 +36,10 @@ class Gallery extends Component {
 
    getPicture = (e) => {this.setState({ link: !this.state.link, picture: e.target.src, numb: e.target.alt})
 }
-prev = () => {this.state.numb === 0 ? this.setState({picture:  this.state.gallerys[15].img , numb: 15}):
+prev = () => {parseInt(this.state.numb) === 0 ? this.setState({picture:  this.state.gallerys[15].img , numb: 15}):
 this.setState({picture:  this.state.gallerys[(parseInt(this.state.numb)) - 1].img , numb: (parseInt(this.state.numb)) - 1})}
 
-next = () => {this.state.numb === 15 ? this.setState({picture:  this.state.gallerys[0].img , numb: 0}):
+next = () => {parseInt(this.state.numb)=== 15 ? this.setState({picture:  this.state.gallerys[0].img , numb: 0}):
 this.setState({picture:  this.state.gallerys[(parseInt(this.state.numb)) + 1].img , numb: (parseInt(this.state.numb)) + 1})}
 // prev = () => {if(this.state.numb === 0){
 //     this.setState({picture:  this.state.gallerys[15].img , numb: 15})
@@ -62,7 +62,7 @@ this.setState({picture:  this.state.gallerys[(parseInt(this.state.numb)) + 1].im
 <Gallerys.Conteiner><div className="gallery-mob">
 {this.state.gallerys ?
     <Gallerys.ConteinerIn>
-  <img className="pictures" src={this.state.gallerys[0].img} alt={this.state.gallerys[0].id} onClick={this.getPicture}></img>
+   <img className="pictures" src={this.state.gallerys[0].img} alt={this.state.gallerys[0].id} onClick={this.getPicture}></img>
   <img className="pictures" src={this.state.gallerys[1].img} alt={this.state.gallerys[1].id} onClick={this.getPicture}></img>
   <img className="pictures" src={this.state.gallerys[2].img} alt={this.state.gallerys[2].id} onClick={this.getPicture}></img>
   <img className="pictures" src={this.state.gallerys[3].img} alt={this.state.gallerys[3].id} onClick={this.getPicture}></img>
@@ -113,9 +113,11 @@ this.setState({picture:  this.state.gallerys[(parseInt(this.state.numb)) + 1].im
     <div className="row justify-content-end">
         <div className="col-2"><div  className="close" onClick={this.getPicture}></div></div>
     </div>
-    <div className="row">
+    <div className="row align-items-center justify-content-center" id="row-allhaight">
         <div className="col-1"><p> <i className="arrow left" onClick={this.prev}></i></p></div>
-        <div className="col-10"><img src={this.state.picture} alt='galleryglobal'></img></div>
+        <div className="col-10"><p> <i className="arrow left" onClick={this.prev}></i></p><img src={this.state.picture} alt='galleryglobal'></img><p> <i className="arrow right" onClick={this.next}></i></p>
+        <Gallerys.Futer></Gallerys.Futer>
+        </div>
         <div className="col-1"><p> <i className="arrow right" onClick={this.next}></i></p>
 </div>
     </div>

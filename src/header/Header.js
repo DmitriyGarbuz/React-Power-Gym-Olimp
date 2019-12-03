@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from '../img/logo.jpg';
 import { NavLink } from 'react-router-dom';
 import Headers from './Header.view';
+import Tel from '../img/telephone-symbol-button.svg'
 
 class Header extends Component {
   constructor(props) {
@@ -54,6 +55,7 @@ else{this.setState({navbar: false});}
         <Headers.NavLi><NavLink to="/contacts">Контакты</NavLink></Headers.NavLi>
       </Headers.NavUl>
     </Headers.Conteiner>
+    <a href="Tel: +380503100458"><img src={Tel} alt="tel" className="rounded float-right" width="50" height="50"></img></a>
         </Headers.Wraper>
         )
     }

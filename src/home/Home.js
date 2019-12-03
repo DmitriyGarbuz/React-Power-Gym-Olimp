@@ -27,9 +27,9 @@ class Home extends Component {
         Tabletop.init({
             key: '140uIkrEoV9SC-ZSQChr-Xin5E_hLcWUVMv-vVA1TqNw',
             callback: googleData => {
-              this.setState({headline: googleData['0'].headline});
+              this.setState({headline: googleData.Abons.elements[0].headline});
             },
-            simpleSheet: true
+            simpleSheet: false
           })
         }
     render () {
@@ -38,9 +38,9 @@ class Home extends Component {
             <Homes.TextAfterH1>Лучшее место для работы над своим телом</Homes.TextAfterH1>
             <Homes.Hr></Homes.Hr>
 <Homes.Conteiner>
-    <Homes.Row>    
+<div className="row"> 
     <Homes.ConteinerIn>
-        <Homes.Row>
+    <Homes.Row>
         <Homes.Logo src={cat3} alt="cats"></Homes.Logo>
         <Homes.TextAtCats> Мы создали современный тренажерный зал, в котором есть все необходимое для эффектных и комфортных тренировок с новейшим оборудованием.</Homes.TextAtCats>
         </Homes.Row>
@@ -59,7 +59,7 @@ class Home extends Component {
         <Homes.TextAtCats> График работы Спортивного клуба Олимп максимально удобный для вас. Мы работаем без выходных с понедельника по пятницу с 7-00 до 22-00 , выходные с 10-00 до 18-00. <b>{this.state.headline}</b></Homes.TextAtCats>
         </Homes.Row>
     </Homes.ConteinerIn> 
-    </Homes.Row>
+    </div>
     <div class="button-container-1">
       <NavLink to="/price">
       <span class="mas"><b>ХОЧУ УЗНАТЬ ЦЕНУ!</b></span>

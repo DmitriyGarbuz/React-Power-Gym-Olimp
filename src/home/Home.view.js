@@ -15,7 +15,7 @@ export default {
 background-position: bottom right, center center, top left;
     @media screen and (min-width: 600px) {
       width: 100%;
-      height: 100vh;
+      height: 145vh;
       margin-top: 0%;
       display: flex;
       background-size: cover;
@@ -25,6 +25,18 @@ background-position: bottom right, center center, top left;
       background-position: left;
       Justify-content: flex-start;
       align-items: center;
+    }
+    @media screen and (min-width: 800px) {
+      height: 120vh;
+    }
+    @media screen and (min-width: 1000px) {
+      height: 100vh;
+    }
+    @media screen and (min-width: 1350px) {
+      height: 110vh;
+    }
+    @media screen and (min-width: 1500px) {
+      height: 100vh;
     }
     `,
     Conteiner: styled.div`
@@ -38,25 +50,47 @@ background-position: bottom right, center center, top left;
       display: flex;
       flex-direction: column;
       margin-left: 0%;
-      width: 70%;
-      height: 90vh;
+      width: 90%;
+      height: 85%;
       background-color: rgba(247,245,245,0.8);
       background-position: center center;
       filter: alpha(opacity=60);
       border-radius: 5px;
-    }`,
+    }
+    @media screen and (min-width: 1000px) {
+      width: 75%;
+      height: 70%;
+    }
+    @media screen and (min-width: 1250px) {
+      width: 70%;
+      height: 80%;
+    }
+    @media screen and (min-width: 1650px) {
+      width: 70%;
+      height: 70%;
+    }
+    `,
     Row: styled.div`
     @media screen and (min-width: 600px) {
-      display: flex;
+      display: block;
       flex-direction: row;
+      position: relative;
+      align-self: flex-start;
     }`,
     ConteinerIn: styled.div`
     @media screen and (min-width: 600px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    @media screen and (min-width: 800px) {
       width: 49%;
       display: flex;
       flex-direction: column;
-    }`,
+    }
+    `,
  H1: styled.h1`
+ margin-top: 2%;
  font-size: 24px; 
  color: white; 
  font-family: 'Helvetica Neue', sans-serif;
@@ -65,12 +99,16 @@ background-position: bottom right, center center, top left;
  padding: 0 0 0px; 
  text-align: center;
  @media screen and (min-width: 600px) {
+   margin-top: 10%;
  color: white; 
  font-family: 'Helvetica Neue', sans-serif; 
  font-size: 46px; 
  line-height: 50px; 
  letter-spacing: 1px; 
  padding: 0 0 0px; 
+ }
+ @media screen and (min-width: 800px) {
+  margin-top: 1%;
  }
 `,
 H2: styled.h2`
@@ -116,7 +154,10 @@ width: 600px;
 height: 12px;
 border: 0;
 box-shadow: inset 0 12px 12px -12px #23344A;
-border-radius: 5px;}`,
+border-radius: 5px;}
+@media screen and (min-width: 1000px) {
+  margin-top: 0vh;
+}`,
 Text: styled.p`
 font-family: 'Orienta', sans-serif;
 font-size: 30px;
@@ -138,6 +179,8 @@ margin-top:2%;
 margin-left: 5px;
 margin-right: 1%;
 @media screen and (min-width: 600px) {
+  position: relative;
+  width: 95%;
 font-size: 16px;
 margin-left: 1%;
 margin-right: 1%;
@@ -145,10 +188,13 @@ margin-right: 1%;
 Futer: styled.div`
 height: 10vh;
     @media screen and (min-width: 600px) {
+      margin-top:1%;
+      height: 1vh;
 }`,
 Backspace: styled.div`
 height: 2vh;
     @media screen and (min-width: 600px) {
+      height: 0vh;
 }`,
 Logo: styled.img`
 width: 95%;
@@ -156,8 +202,10 @@ height: auto;
 border-radius: 10%;
 margin: 1vh;
 @media screen and (min-width: 600px) {
-width: 200px;
-height: auto;
+  position: relative;
+  width: 12rem;
+height: 12rem;
+float: left;
 border-radius: 10%;
 margin: 1vh;
 }`,

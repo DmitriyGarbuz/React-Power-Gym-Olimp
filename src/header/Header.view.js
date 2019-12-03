@@ -5,6 +5,14 @@ export default {
 TopDiv: styled.div`
 display: none;
 @media screen and (min-width: 600px) {
+  display: block;
+background-image: URL(${Cats});
+width: 100%;
+height: 4vh;
+background-position: center;
+background-size: contain;
+}
+   @media screen and (min-width: 1035px) {
 display: block;
 background-image: URL(${Cats});
 width: 100%;
@@ -66,9 +74,19 @@ background-size: contain;
   Logo: styled.img`
   border-radius: 5%;
   width: 100%;
-  
   position: releitive;
   @media screen and (min-width: 600px) {
+    display: block;
+    position: absolute;
+    top:0vh;
+    left: 0%;
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    border: 7px solid #2F5B81;
+    margin: 1vh;
+  }
+  @media screen and (min-width: 1035px) {
   display: block;
   position: absolute;
   top: -1vh;
@@ -119,6 +137,14 @@ display: none;
         padding: 0;
         margin: 0;
         @media screen and (min-width: 600px) {
+          display: flex;
+          width: 400px;
+          overflow: auto;
+          width: 600px;
+          Justify-content: center;
+           align-items: center;
+        }
+          @media screen and (min-width: 1035px) {
           overflow: auto;
           width: 600px;
           Justify-content: center;
@@ -132,6 +158,16 @@ display: none;
         height: 40px;
         border-bottom: 1px solid #888;
         @media screen and (min-width: 600px) {
+          width: 80px;
+          border-bottom: none;
+          height: 50px;
+          line-height: 50px;
+          font-size: 1em;
+          display: inline-block;
+          margin-right: -4px;
+          float: left;
+        }
+          @media screen and (min-width: 1035px) {
           width: 120px;
           border-bottom: none;
           height: 50px;
@@ -152,5 +188,17 @@ display: none;
           color: #2F5B81;
         }
         }
-      ` 
+      ` ,
+      Tel: styled.img`
+      display: block;
+      position: fixed;
+      top:0vh;
+      rigft: 0%;
+      width: 45px;
+      height: 45px;
+      border-radius: 10%;
+      margin: 1vh;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }`
 }
