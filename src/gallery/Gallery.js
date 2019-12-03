@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import './style-gallery.css';
+
 import Gallerys from '../gallery/Gallery.view';
+import './style-gallery.css';
 // import AwesomeSlider from 'react-awesome-slider';
 // import AwsSliderStyles from './styles.scss';
 import Tabletop from 'tabletop';
@@ -111,7 +112,7 @@ this.setState({picture:  this.state.gallerys[(parseInt(this.state.numb)) + 1].im
 {this.state.link !== false ? <div className="globalPicture">
     <div className="container"></div>
     <div className="row justify-content-end">
-        <div className="col-2"><div  className="close" onClick={this.getPicture}></div></div>
+        <div className="col-2 align-self-end"><div  className="close" onClick={this.getPicture}></div></div>
     </div>
     <div className="row align-items-center justify-content-center" id="row-allhaight">
         <div className="col-1"><p> <i className="arrow left" onClick={this.prev}></i></p></div>
